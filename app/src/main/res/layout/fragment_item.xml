@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/item_number"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="@dimen/text_margin"-->
+    <!--        android:textAppearance="?attr/textAppearanceListItem" />-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/contactLayoutItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfileCon"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_margin="10sp"
+            android:src="@android:drawable/ic_menu_camera" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNameCon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_margin"
+                android:layout_marginTop="@dimen/text_margin"
+                android:text="@string/action_sign_in"
+                android:textAlignment="textStart"
+                android:textAppearance="?attr/textAppearanceListItem"
+                android:textSize="20sp"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/tvChatCon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_margin"
+                    android:layout_weight="0.2"
+                    android:maxLength="24"
+                    android:text="@string/action_sign_in"
+                    android:textAlignment="textStart"
+                    android:visibility="invisible"
+                    tools:ignore="RtlCompat" />
+
+                <TextView
+                    android:id="@+id/tvChatConCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/text_margin"
+                    android:layout_weight="0.9"
+                    android:background="@drawable/coversation"
+                    android:textAlignment="center"
+                    android:textColor="@color/cardview_light_background"
+                    android:visibility="invisible"
+                    tools:ignore="RtlCompat" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="60sp"
+        android:background="?android:attr/listDivider" />
+</LinearLayout>
